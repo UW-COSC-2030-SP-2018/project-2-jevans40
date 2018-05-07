@@ -23,22 +23,28 @@ using std::endl;
 int numoftests = 1000;
 
 void swap(int &first, int &second);
+//swaps the data of first and second
 
 void makeRandVector(std::vector<int> &vect, int size);
 int randnum();
+//used to make random tests
 
 void quickSort( std::vector<int> &list, int low, int high);
 int quickSortPartitioner(std::vector<int> &list, int low, int high);
+//Sorts quick using a list and a start(usually 0) and a high
 
 int binarySearch(std::vector<int> list,int target,int low,int high);
+//Finds a position in a vector list, target target, with the min and max to search.
 
 void mergeSort(std::vector<int> &list, int n);
 void SplitMerge(std::vector<int> &copy, int iBegin, int  iEnd, std::vector<int> &list);
 void Merge(std::vector<int> &list, int iBegin, int iMiddle, int iEnd, std::vector<int> &copy);
 void CopyArray(std::vector<int> &list, std::vector<int> &copy);
+//Merge Functions, input a vector list, and the size
 
 unsigned int intHash(const std::string& str);
 unsigned int intHash(const int &);
+//hashes ints or strings
 
 
 int main() {
@@ -46,6 +52,7 @@ int main() {
 	bool binarytest = true;
 	bool mergetest = true;
 	bool hashtest = true;
+	//Tests to see if there is any inconsistancies
 	bloomFilter filter(407,5);
 	
 	for (int i = 0; i < numoftests; i++) {
